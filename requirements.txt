@@ -1,0 +1,8 @@
+qrcode
+pyzbar
+numpy
+Cython
+pylint
+pytest-cov
+pytest
+black
