@@ -6,3 +6,4 @@ pylint
 pytest-cov
 pytest
 black
+opencv-python
