@@ -2,8 +2,8 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
-#test:
-#	python -m pytest -vv coreqr test_coreqr.py
+test:
+	python -m pytest -vv coreqr test_coreqr.py
 format:
 	black *.py
 
