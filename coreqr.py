@@ -1,5 +1,5 @@
 import qrcode
-import location_cython
+import cypthon_file.location_cython as location_cython
 
 
 def encod_data(lati, lon):
