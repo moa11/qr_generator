@@ -9,7 +9,7 @@ format:
 
 
 lint:
-	pylint --extension-pkg-whitelist=cv2 --disable=R,C *.py
+	pylint  --disable=maybe-no-member  --disable=R,C *.py
 
 build:
 	cython location_cython.pyx --embed
