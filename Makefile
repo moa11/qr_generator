@@ -9,7 +9,7 @@ format:
 
 
 lint:
-        pylint --extension-pkg-whitelist=cv2
+	pylint --extension-pkg-whitelist=cv2
 	pylint --disable=R,C *.py
 
 build:
