@@ -18,5 +18,5 @@ def testencod_data():
     assert(location["longitude"])in decode_data(decoded_lat=lat,decoded_lon=lon,decoded_ori=ori)
     assert(location["orientation"])in decode_data(decoded_lat=lat,decoded_lon=lon,decoded_ori=ori)
     
-testencod_data()
-a=1
+
+
