@@ -2,7 +2,7 @@ import qrcode
 import cypthon_file.location_cython as location_cython
 
 
-def encode_data(lati,lon,ori):
+def encod_data(lati,lon,ori):
     lati =  location_cython.from_float2char2(lati)
     lon =  location_cython.from_float2char2(lon)
     if ori >0 :
@@ -30,14 +30,15 @@ def make_qr(encode_data, name: str):
     return img
 
 
-def decode_qr(qrcodes):
-    data_enc=qrcodes[0].data.decode('utf8')
-    decoded_lat = bytes(list(map(ord,data_enc[:8])))
-    decoded_lon = bytes(list(map(ord,data_enc[8:16])))
-    decoded_ori=bytes(list(map(ord,data_enc[16:])))
-    print(decoded_lat,decoded_lon,decoded_ori)
-
+def decode_data(decoded_lat,decoded_lon,decoded_ori):
     lat=location_cython.from_char2flaot(decoded_lat)
     lon=location_cython.from_char2flaot(decoded_lon)
     ori=int.from_bytes(decoded_ori, 'little',signed="true")
     return lat,lon,ori
+
+def get_data(qrcodes):
+    data_enc=qrcodes[0].data.decode('utf8')
+    decoded_lat = bytes(list(map(ord,data_enc[:8])))
+    decoded_lon = bytes(list(map(ord,data_enc[8:16])))
+    decoded_ori=bytes(list(map(ord,data_enc[16:])))
+    return decoded_lat,decoded_lon,decoded_ori

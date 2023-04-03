@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv coreqr test_coreqr.py
+	python -m pytest -vv test_coreqr.py
 format:
 	black *.py
 
