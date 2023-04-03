@@ -14,6 +14,6 @@ encod_data=encod_data(location['latitude'] ,location['longitude'])
 img = cv2.imread('test.png')
 qrcodes = decode(img)
 lat,lon=decode_data(qrcodes)
-print(lat,lon)
+print(lat,lon,location["orientation"])
 
 
